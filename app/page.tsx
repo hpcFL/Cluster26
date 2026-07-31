@@ -400,6 +400,7 @@ export default function Home() {
               </span>
               <span className="hero-title-rule" aria-hidden="true" />
               <span className="hero-title-kicker">The 3rd Workshop on</span>
+              <WorkshopLogo hero />
               <span className="hero-title-full">
                 Federated and Privacy-Preserving AI{" "}
                 <span className="hero-title-highlight">for HPC</span>
@@ -442,7 +443,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <WorkshopLogo hero />
           <aside className="hero-note" aria-label="Workshop focus">
             <span>Focus / 2026</span>
             <p>Federated learning meets HPC, cross-silo privacy and agentic AI.</p>

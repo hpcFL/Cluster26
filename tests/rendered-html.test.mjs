@@ -30,7 +30,7 @@ test("statically exports the complete workshop landing page", async () => {
   assert.match(html, /class="hero-title-highlight">for HPC/);
   assert.match(
     html,
-    /hero-title-short[\s\S]*?hero-title-rule[\s\S]*?hero-title-kicker">The 3rd Workshop on[\s\S]*?hero-title-full/,
+    /hero-title-short[\s\S]*?hero-title-rule[\s\S]*?hero-title-kicker">The 3rd Workshop on[\s\S]*?workshop-logo-hero[\s\S]*?hero-title-full/,
   );
   assert.match(html, /About/);
   assert.match(html, /Scope/);
@@ -112,10 +112,18 @@ test("statically exports the complete workshop landing page", async () => {
 });
 
 test("includes the social preview image, workshop logo, speaker portrait, and product metadata", async () => {
-  const [layout, packageJson, socialImage, workshopLogo, angLiPortrait] =
+  const [
+    layout,
+    packageJson,
+    postcssConfig,
+    socialImage,
+    workshopLogo,
+    angLiPortrait,
+  ] =
     await Promise.all([
     readFile(new URL("../app/layout.tsx", import.meta.url), "utf8"),
     readFile(new URL("../package.json", import.meta.url), "utf8"),
+    readFile(new URL("../postcss.config.mjs", import.meta.url), "utf8"),
     readFile(new URL("public/og.png", templateRoot)),
     readFile(new URL("public/workshop-logo.png", templateRoot)),
     readFile(new URL("public/speakers/ang-li.jpg", templateRoot)),
@@ -124,6 +132,11 @@ test("includes the social preview image, workshop logo, speaker portrait, and pr
   assert.match(layout, /hpcfl\.github\.io\/Cluster26/);
   assert.match(layout, /NEXT_PUBLIC_SITE_URL/);
   assert.match(layout, /summary_large_image/);
+  assert.match(layout, /import "normalize\.css";/);
+  assert.match(packageJson, /"normalize\.css": "\^8\.0\.1"/);
+  assert.match(packageJson, /"autoprefixer":/);
+  assert.match(packageJson, /"browserslist":/);
+  assert.match(postcssConfig, /autoprefixer:\s*\{\}/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.ok(socialImage.byteLength > 100_000);
   assert.ok(workshopLogo.byteLength > 100_000);
@@ -187,12 +200,18 @@ test("includes responsive phone and tablet layouts", async () => {
   assert.match(stylesheet, /--hero-marquee-speed:/);
   assert.match(stylesheet, /--hero-marquee-logo-width:/);
   assert.match(stylesheet, /--hero-workshop-logo-size:/);
-  assert.match(stylesheet, /--hero-workshop-logo-right:/);
-  assert.match(stylesheet, /--hero-workshop-logo-top:/);
   assert.match(stylesheet, /--hero-workshop-logo-opacity:/);
   assert.match(
     stylesheet,
-    /\.workshop-logo-hero\s*\{[\s\S]*?position:\s*absolute;[\s\S]*?right:\s*var\(--hero-workshop-logo-right\);[\s\S]*?width:\s*var\(--hero-workshop-logo-size\);/,
+    /\.workshop-logo-hero\s*\{[\s\S]*?position:\s*relative;[\s\S]*?grid-area:\s*logo;[\s\S]*?width:\s*var\(--hero-workshop-logo-size\);[\s\S]*?justify-self:\s*end;/,
+  );
+  assert.match(
+    stylesheet,
+    /h1\s*\{[\s\S]*?grid-template-areas:[\s\S]*?"short logo"[\s\S]*?"full full";[\s\S]*?grid-template-columns:\s*minmax\(0, 1fr\) auto;/,
+  );
+  assert.doesNotMatch(
+    stylesheet,
+    /\.workshop-logo-hero\s*\{[^}]*position:\s*absolute;/,
   );
   assert.match(stylesheet, /--hero-detail-cards-width:/);
   assert.match(stylesheet, /--workshop-header-logo-size:\s*48px;/);
@@ -256,10 +275,10 @@ test("includes responsive phone and tablet layouts", async () => {
     /\.scope-bento-card:nth-child\(5\),[\s\S]*?\.scope-bento-card:nth-child\(7\)\s*\{[\s\S]*?grid-column:\s*span 4;/,
   );
   assert.doesNotMatch(stylesheet, /\.scope-bento-card::after/);
-  assert.match(stylesheet, /@keyframes hero-marquee-left-to-right/);
+  assert.match(stylesheet, /@keyframes hero-marquee-right-to-left/);
   assert.match(
     stylesheet,
-    /from\s*\{[\s\S]*?translate3d\(-50%, 0, 0\)[\s\S]*?to\s*\{[\s\S]*?translate3d\(0, 0, 0\)/,
+    /from\s*\{[\s\S]*?translate3d\(0, 0, 0\)[\s\S]*?to\s*\{[\s\S]*?translate3d\(-50%, 0, 0\)/,
   );
   assert.match(
     stylesheet,

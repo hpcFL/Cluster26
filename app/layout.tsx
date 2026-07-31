@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Space_Grotesk } from "next/font/google";
+import "normalize.css";
 import "./globals.css";
 
 const siteUrl = (

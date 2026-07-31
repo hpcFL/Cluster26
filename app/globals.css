@@ -38,9 +38,7 @@
   --workshop-header-logo-size: 48px;
   --workshop-footer-logo-size: 64px;
   /* Hero workshop-logo controls. */
-  --hero-workshop-logo-size: 300px;
-  --hero-workshop-logo-right: 12%;
-  --hero-workshop-logo-top: 28%;
+  --hero-workshop-logo-size: clamp(180px, 17vw, 260px);
   --hero-workshop-logo-opacity: 0.9;
   /* Scope bento-grid size controls. */
   --scope-bento-grid-max-width: 980px;
@@ -148,12 +146,13 @@ section[id] {
 }
 
 .workshop-logo-hero {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: var(--hero-workshop-logo-top);
-  right: var(--hero-workshop-logo-right);
+  grid-area: logo;
   width: var(--hero-workshop-logo-size);
   height: var(--hero-workshop-logo-size);
+  align-self: start;
+  justify-self: end;
   padding: 12px;
   pointer-events: none;
   border: 1px solid rgba(255, 253, 248, 0.22);
@@ -161,7 +160,6 @@ section[id] {
   opacity: var(--hero-workshop-logo-opacity);
   background: rgba(244, 241, 233, 0.96);
   box-shadow: 0 24px 70px rgba(4, 12, 24, 0.34);
-  transform: translateY(-50%);
 }
 
 .site-header nav {
@@ -268,7 +266,7 @@ section[id] {
   display: flex;
   width: max-content;
   will-change: transform;
-  animation: hero-marquee-left-to-right var(--hero-marquee-speed) linear
+  animation: hero-marquee-right-to-left var(--hero-marquee-speed) linear
     infinite;
 }
 
@@ -310,13 +308,13 @@ section[id] {
   box-shadow: 0 0 0 5px rgba(255, 123, 98, 0.13);
 }
 
-@keyframes hero-marquee-left-to-right {
+@keyframes hero-marquee-right-to-left {
   from {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -361,13 +359,22 @@ h3 {
 
 h1 {
   display: grid;
+  grid-template-areas:
+    "short logo"
+    "rule logo"
+    "kicker logo"
+    "full full";
+  grid-template-columns: minmax(0, 1fr) auto;
   max-width: none;
   margin-bottom: 42px;
+  align-items: end;
   justify-items: start;
-  gap: clamp(18px, 2vw, 28px);
+  column-gap: clamp(24px, 4vw, 64px);
+  row-gap: clamp(18px, 2vw, 28px);
 }
 
 .hero-title-short {
+  grid-area: short;
   font-size: clamp(
     calc(2.8rem * var(--hero-title-font-scale)),
     calc(6.4vw * var(--hero-title-font-scale)),
@@ -385,12 +392,14 @@ h1 {
 }
 
 .hero-title-rule {
+  grid-area: rule;
   width: min(100%, 600px);
   height: 3px;
   background: var(--teal);
 }
 
 .hero-title-kicker {
+  grid-area: kicker;
   color: var(--teal);
   font-family: var(--font-body), Arial, sans-serif;
   font-size: clamp(0.8rem, 1.1vw, 1.1rem);
@@ -401,6 +410,7 @@ h1 {
 }
 
 .hero-title-full {
+  grid-area: full;
   max-width: none;
   font-size: clamp(
     calc(0.7rem * var(--hero-workshop-name-font-scale)),
@@ -1644,6 +1654,7 @@ footer > a {
 @media (max-width: 960px) {
   :root {
     --page-gutter: 8vw;
+    --hero-workshop-logo-size: clamp(136px, 19vw, 190px);
   }
 
   .site-header nav {
@@ -1656,10 +1667,6 @@ footer > a {
   }
 
   .hero-note {
-    display: none;
-  }
-
-  .workshop-logo-hero {
     display: none;
   }
 
@@ -1698,6 +1705,7 @@ footer > a {
 @media (max-width: 720px) {
   :root {
     --page-gutter: 18px;
+    --hero-workshop-logo-size: clamp(88px, 26vw, 128px);
   }
 
   html {
@@ -1770,9 +1778,19 @@ footer > a {
   }
 
   h1 {
+    grid-template-areas:
+      "short short"
+      "rule rule"
+      "kicker logo"
+      "full full";
     margin-bottom: 34px;
+    column-gap: 18px;
     letter-spacing: -0.052em;
     line-height: 0.96;
+  }
+
+  .workshop-logo-hero {
+    padding: 8px;
   }
 
   .hero-location,
@@ -1956,6 +1974,7 @@ footer > a {
 @media (max-width: 480px) {
   :root {
     --page-gutter: 16px;
+    --hero-workshop-logo-size: clamp(76px, 25vw, 108px);
   }
 
   .site-header {
