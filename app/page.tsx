@@ -155,14 +155,14 @@ const invitedSpeakers = [
     photo: publicAsset("/speakers/yijiang_li.jpg"),
   },
   {
-    name: "TBA speaker",
-    initials: "TBA",
-    role: "Invited speaker",
-    organization: "To be announced",
-    bio: "Speaker biography and profile details will be added when this invited speaker is announced.",
-    profile: null,
-    photo: null,
-  },
+    name: "Jin-Hee Cho",
+    initials: "JHC",
+    role: "Associate Professor",
+    organization: "Virginia Tech, USA",
+    bio: "Jin-Hee Cho directs the Trustworthy Cyberspace Lab at Virginia Tech, working on trust management, uncertainty-aware decision-making, and AI for cybersecurity, with additional interests in moving target defense, deceptive defense, and network science.",
+    profile: "https://people.cs.vt.edu/~jicho/",
+    photo: publicAsset("/speakers/jin-hee-cho.jpg"),
+},
   {
     name: "TBA speaker",
     initials: "TBA",
@@ -428,7 +428,7 @@ export default function Home() {
                 <span className="calendar-icon" aria-hidden="true" />
                 <div>
                   <dt>Date</dt>
-                  <dd>September xx, 2026</dd>
+                  <dd>September 22, 2026</dd>
                 </div>
               </div>
             </dl>
@@ -506,6 +506,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
+            <h3>Tentative, final schedule to be updated soon...</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">
