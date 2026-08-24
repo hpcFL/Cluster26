@@ -564,7 +564,7 @@ export default function Home() {
                   <p className="speaker-category">Keynote</p>
                   <h3>{keynoteSpeaker.name}</h3>
                   <p className="speaker-organization">
-                    {keynoteSpeaker.note}
+                    {keynoteSpeaker.organization}
                   </p>
                 </div>
               </div>
