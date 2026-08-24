@@ -109,21 +109,23 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 const schedule = [
   { time: "08:25 - 08:30", activity: "Opening remarks", type: "Welcome" },
   { time: "08:30 - 09:15", activity: "Keynote speaker", type: "Keynote" },
-  { time: "09:15 - 09:35", activity: "Invited talk 1", type: "Invited talk" },
+  { time: "09:15 - 09:35", activity: "Jin-Hee Cho", type: "Invited talk" },
   { time: "09:35 - 09:50", activity: "Morning break", type: "Break" },
-  { time: "09:50 - 10:10", activity: "Invited talk 2", type: "Invited talk" },
+  { time: "09:50 - 10:10", activity: "Sumit Kumar Jha", type: "Invited talk" },
   { time: "10:10 - 10:30", activity: "Ziyue Xu", type: "Invited talk" },
   { time: "10:30 - 10:50", activity: "Ang Li", type: "Invited talk" },
   { time: "10:50 - 11:10", activity: "Yijiang Li", type: "Invited talk" },
-  { time: "11:10 - 11:55", activity: "Panel discussion", type: "Panel" },
+  { time: "11:10 - 11:55", activity: "Panel discussion", type: "Panel discussion" },
   { time: "11:55 - 12:00", activity: "Concluding remarks", type: "Closing" },
 ];
 
 const keynoteSpeaker = {
-  name: "Keynote speaker",
-  initials: "TBA",
-  note: "To be announced",
-  bio: "Speaker biography and profile details will be added when the keynote is announced.",
+  name: "Aidong Zhang",
+  initials: "AZ",
+  organization: "University of Virginia, USA",
+  bio: "Aidong Zhang's research focuses on developing machine learning approaches to interpretable and fair learning, concept-based learning, federated learning, generative AI and medical applications, such as diagnosis and monitoring of Alzheimer's Disease (AD) and AD-related dementias (ADRD). In particular, she works on AI for Sciences on large language models for hypothesis generations for scientific discovery. Dr. Zhang is Thomas M. Linville Professor of Computer Science, with a joint appointment in the Department of Biomedical Engineering and School of Data Science at University of Virginia. Her research interests focus on machine learning, AI for sciences, bioinformatics and health informatics.",
+  profile: "https://www.cs.virginia.edu/~az9eg/website/home.html",
+  photo: publicAsset("/committee/aidong-zhang.jpg"),
 };
 
 const invitedSpeakers = [
@@ -164,13 +166,13 @@ const invitedSpeakers = [
     photo: publicAsset("/speakers/jin-hee-cho.jpg"),
 },
   {
-    name: "TBA speaker",
-    initials: "TBA",
-    role: "Invited speaker",
-    organization: "To be announced",
-    bio: "Speaker biography and profile details will be added when this invited speaker is announced.",
-    profile: null,
-    photo: null,
+    name: "Invited speaker",
+    initials: "IS",
+    role: "Role",
+    organization: "Organization",
+    bio: "enter bio here",
+    profile: "profile url",
+    photo: "n/a",
   },
 ];
 
