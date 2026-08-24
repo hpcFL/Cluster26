@@ -125,7 +125,7 @@ const keynoteSpeaker = {
   organization: "University of Virginia, USA",
   bio: "Aidong Zhang's research focuses on developing machine learning approaches to interpretable and fair learning, concept-based learning, federated learning, generative AI and medical applications, such as diagnosis and monitoring of Alzheimer's Disease (AD) and AD-related dementias (ADRD). In particular, she works on AI for Sciences on large language models for hypothesis generations for scientific discovery. Dr. Zhang is Thomas M. Linville Professor of Computer Science, with a joint appointment in the Department of Biomedical Engineering and School of Data Science at University of Virginia. Her research interests focus on machine learning, AI for sciences, bioinformatics and health informatics.",
   profile: "https://www.cs.virginia.edu/~az9eg/website/home.html",
-  photo: publicAsset("/committee/aidong-zhang.jpg"),
+  photo: publicAsset("/speakers/aidong-zhang.jpg"),
 };
 
 const invitedSpeakers = [
