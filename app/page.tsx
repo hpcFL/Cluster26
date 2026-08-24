@@ -123,7 +123,7 @@ const keynoteSpeaker = {
   name: "Aidong Zhang",
   initials: "AZ",
   organization: "University of Virginia, USA",
-  bio: "Aidong Zhang's research focuses on developing machine learning approaches to interpretable and fair learning, concept-based learning, federated learning, generative AI and medical applications, such as diagnosis and monitoring of Alzheimer's Disease (AD) and AD-related dementias (ADRD). In particular, she works on AI for Sciences on large language models for hypothesis generations for scientific discovery. Dr. Zhang is Thomas M. Linville Professor of Computer Science, with a joint appointment in the Department of Biomedical Engineering and School of Data Science at University of Virginia. Her research interests focus on machine learning, AI for sciences, bioinformatics and health informatics.",
+  bio: "Aidong Zhang's research advances machine learning for interpretable, fair, concept-based, and federated learning, plus generative AI, with medical applications in Alzheimer's Disease and ADRD diagnosis and monitoring. She also applies large language models to generate scientific hypotheses.",
   profile: "https://www.cs.virginia.edu/~az9eg/website/home.html",
   photo: publicAsset("/speakers/aidong-zhang.jpg"),
 };
@@ -553,13 +553,15 @@ export default function Home() {
           <div className="speaker-grid">
             <article className="speaker-card speaker-card-keynote speaker-card-invited">
               <div className="speaker-identity">
-                <div
-                  className="speaker-photo speaker-photo-placeholder portrait-keynote"
-                  role="img"
-                  aria-label="Portrait placeholder for the keynote speaker"
-                >
-                  <span>{keynoteSpeaker.initials}</span>
-                </div>
+                <Image
+                  className="speaker-photo"
+                  src={keynoteSpeaker.photo}
+                  alt={`Portrait of ${keynoteSpeaker.name}`}
+                  width={168}
+                  height={168}
+                  loading="lazy"
+                  unoptimized
+                />
                 <div>
                   <p className="speaker-category">Keynote</p>
                   <h3>{keynoteSpeaker.name}</h3>

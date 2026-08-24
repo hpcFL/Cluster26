@@ -89,14 +89,15 @@ test("statically exports the complete workshop landing page", async () => {
   assert.match(html, /speaker-card speaker-card-keynote/);
   assert.match(
     html,
-    /speaker-card speaker-card-keynote[\s\S]*?Keynote speaker[\s\S]*?speaker-card speaker-card-invited[\s\S]*?Ziyue Xu/,
+    /speaker-card speaker-card-keynote[\s\S]*?Aidong Zhang[\s\S]*?speaker-card speaker-card-invited[\s\S]*?Ziyue Xu/,
   );
-  assert.equal((html.match(/<h3>TBA speaker<\/h3>/g) ?? []).length, 2);
+  assert.equal((html.match(/<h3>Invited speaker<\/h3>/g) ?? []).length, 1);
   assert.equal(
     (html.match(/class="speaker-card speaker-card-/g) ?? []).length,
     6,
   );
   assert.doesNotMatch(html, /Wei Qingsong|Additional invited speaker/);
+  assert.match(html, publicAssetPattern("/speakers/aidong-zhang.jpg"));
   assert.match(html, publicAssetPattern("/committee/ziyue-xu.jpg"));
   assert.match(html, publicAssetPattern("/speakers/ang-li.jpg"));
   assert.match(html, publicAssetPattern("/speakers/yijiang_li.jpg"));
