@@ -108,10 +108,10 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 
 const schedule = [
   { time: "08:25 - 08:30", activity: "Opening remarks", type: "Welcome" },
-  { time: "08:30 - 09:15", activity: "Keynote speaker", type: "Keynote" },
+  { time: "08:30 - 09:15", activity: "Aidong Zhang", type: "Keynote" },
   { time: "09:15 - 09:35", activity: "Jin-Hee Cho", type: "Invited talk" },
   { time: "09:35 - 09:50", activity: "Morning break", type: "Break" },
-  { time: "09:50 - 10:10", activity: "Sumit Kumar Jha", type: "Invited talk" },
+  { time: "09:50 - 10:10", activity: "Invited speaker", type: "Invited talk" },
   { time: "10:10 - 10:30", activity: "Ziyue Xu", type: "Invited talk" },
   { time: "10:30 - 10:50", activity: "Ang Li", type: "Invited talk" },
   { time: "10:50 - 11:10", activity: "Yijiang Li", type: "Invited talk" },
