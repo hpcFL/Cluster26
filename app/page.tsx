@@ -115,7 +115,7 @@ const schedule = [
   { time: "11:40 - 12:00", activity: "Ziyue Xu", type: "Talk" },
   { time: "12:00 - 12:20", activity: "Ang Li", type: "Talk" },
   { time: "12:20 - 12:40", activity: "Invited Speaker", type: "Talk" },
-  { time: "12:40 - 13:25", activity: "Panel discussion", type: "Panel discussion" },
+  { time: "12:40 - 13:25", activity: "Panel discussion", type: "Panel" },
   { time: "13:25 - 13:30", activity: "Concluding remarks", type: "Closing" },
 ];
 
