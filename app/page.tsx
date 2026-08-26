@@ -107,16 +107,16 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 }
 
 const schedule = [
-  { time: "08:25 - 08:30", activity: "Opening remarks", type: "Welcome" },
-  { time: "08:30 - 09:15", activity: "Aidong Zhang", type: "Keynote" },
-  { time: "09:15 - 09:35", activity: "Jin-Hee Cho", type: "Invited talk" },
-  { time: "09:35 - 09:50", activity: "Morning break", type: "Break" },
-  { time: "09:50 - 10:10", activity: "Invited speaker", type: "Invited talk" },
-  { time: "10:10 - 10:30", activity: "Ziyue Xu", type: "Invited talk" },
-  { time: "10:30 - 10:50", activity: "Ang Li", type: "Invited talk" },
-  { time: "10:50 - 11:10", activity: "Yijiang Li", type: "Invited talk" },
-  { time: "11:10 - 11:55", activity: "Panel discussion", type: "Panel discussion" },
-  { time: "11:55 - 12:00", activity: "Concluding remarks", type: "Closing" },
+  { time: "09:55 - 10:00", activity: "Opening remarks", type: "Welcome" },
+  { time: "10:00 - 10:45", activity: "Aidong Zhang", type: "Keynote" },
+  { time: "10:45 - 11:05", activity: "Jin-Hee Cho", type: "Talk" },
+  { time: "11:05 - 11:20", activity: "Coffee Break", type: "Break" },
+  { time: "11:20 - 11:40", activity: "Yijiang Li", type: "Talk" },
+  { time: "11:40 - 12:00", activity: "Ziyue Xu", type: "Talk" },
+  { time: "12:00 - 12:20", activity: "Ang Li", type: "Talk" },
+  { time: "12:20 - 12:40", activity: "Invited Speaker", type: "Talk" },
+  { time: "12:40 - 13:25", activity: "Panel discussion", type: "Panel discussion" },
+  { time: "13:25 - 13:30", activity: "Concluding remarks", type: "Closing" },
 ];
 
 const keynoteSpeaker = {
