@@ -107,17 +107,17 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 }
 
 const schedule = [
-  { time: "09:45 - 09:50", activity: "Opening remarks", type: "Welcome" },
-  { time: "09:50 - 10:35", activity: "Aidong Zhang", type: "Keynote" },
-  { time: "10:35 - 10:55", activity: "Ang Li", type: "Talk" },
-  { time: "10:55 - 11:15", activity: "Yijiang Li", type: "Talk" },
-  { time: "11:15 - 11:30", activity: "Coffee Break", type: "Break" },
-  { time: "11:30 - 11:50", activity: "Ziyue Xu", type: "Talk" },
-  { time: "11:50 - 12:10", activity: "Jin-Hee Cho", type: "Talk" },
-  { time: "12:10 - 12:30", activity: "Invited Speaker1", type: "Talk" },
-  { time: "12:30 - 12:50", activity: "Invited Speaker2", type: "Talk" },
-  { time: "12:50 - 13:30", activity: "Panel discussion", type: "Panel" },
-  { time: "13:30 - 13:35", activity: "Concluding remarks", type: "Closing" },
+  { time: "09:45am - 09:50am", activity: "Opening remarks", type: "Welcome" },
+  { time: "09:50am - 10:35am", activity: "Aidong Zhang", type: "Keynote" },
+  { time: "10:35am - 10:55am", activity: "Ang Li", type: "Talk" },
+  { time: "10:55am - 11:15am", activity: "Yijiang Li", type: "Talk" },
+  { time: "11:15am - 11:30am", activity: "Coffee Break", type: "Break" },
+  { time: "11:30am - 11:50am", activity: "Ziyue Xu", type: "Talk" },
+  { time: "11:50am - 12:10pm", activity: "Jin-Hee Cho", type: "Talk" },
+  { time: "12:10pm - 12:30pm", activity: "Invited Speaker1", type: "Talk" },
+  { time: "12:30pm - 12:50pm", activity: "Invited Speaker2", type: "Talk" },
+  { time: "12:50pm - 01:30pm", activity: "Panel discussion", type: "Panel" },
+  { time: "01:30pm - 01:35pm", activity: "Concluding remarks", type: "Closing" },
 ];
 
 const keynoteSpeaker = {
@@ -518,7 +518,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
-            <h3>Tentative, final schedule to be updated soon...</h3>
+            <h3>Workshop schedule. All times are listed in Eastern Daylight Time (EDT).</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">
