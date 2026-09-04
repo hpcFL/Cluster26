@@ -115,7 +115,7 @@ const schedule = [
   { time: "11:30am - 11:50am", activity: "Ziyue Xu", type: "Talk" },
   { time: "11:50am - 12:10pm", activity: "Jin-Hee Cho", type: "Talk" },
   { time: "12:10pm - 12:30pm", activity: "Invited Speaker1", type: "Talk" },
-  { time: "12:30pm - 12:50pm", activity: "Invited Speaker2", type: "Talk" },
+  { time: "12:30pm - 12:50pm", activity: "Rui Hu", type: "Talk" },
   { time: "12:50pm - 01:30pm", activity: "Panel discussion", type: "Panel" },
   { time: "01:30pm - 01:35pm", activity: "Concluding remarks", type: "Closing" },
 ];
@@ -176,13 +176,13 @@ const invitedSpeakers = [
     photo: null,
   },
   {
-    name: "Invited speaker2",
-    initials: "IS2",
-    role: "Role",
-    organization: "Organization",
-    bio: "enter bio here",
-    profile: null,
-    photo: null,
+    name: "Rui (Zoey) Hu",
+    initials: "RZH",
+    role: "Assistant Professor",
+    organization: "University of Nevada, Reno",
+    bio: "Dr. Hu is an assistant professor in the Department of Computer Science & Engineering at the University of Nevada, Reno. She studies the reliability, security, and update dynamics of large-scale models in federated and distributed enterprise and edge environments, where data, control, and trust are inherently decentralized.",
+    profile: "https://www.unr.edu/cse/people/rui-(zoey)-hu",
+    photo: publicAsset("/speakers/rui-zoey-hu.jpg"),
   }
 ];
 
