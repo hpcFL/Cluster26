@@ -1101,6 +1101,13 @@ h1 {
   min-width: 0;
 }
 
+.speaker-card-keynote {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: var(--speaker-card-width);
+}
+
 .speaker-card-invited {
   min-height: var(--person-card-min-height);
   overflow: hidden;

@@ -56,7 +56,7 @@ test("statically exports the complete workshop landing page", async () => {
   assert.match(html, /Speakers/);
   assert.match(html, /Committee/);
   assert.match(html, /Alexandria, Virginia/);
-  assert.match(html, /September xx, 2026/);
+  assert.match(html, /September 22, 2026/);
   assert.match(html, /class="hero-detail-date"/);
   assert.match(html, /class="calendar-icon"/);
   assert.match(html, /cluster26-logo\.png/);
@@ -91,10 +91,12 @@ test("statically exports the complete workshop landing page", async () => {
     html,
     /speaker-card speaker-card-keynote[\s\S]*?Aidong Zhang[\s\S]*?speaker-card speaker-card-invited[\s\S]*?Ziyue Xu/,
   );
-  assert.equal((html.match(/<h3>Invited speaker<\/h3>/g) ?? []).length, 1);
+  assert.match(html, /<h3>Invited speaker1<\/h3>/);
+  assert.match(html, /<h3>Invited speaker2<\/h3>/);
+  assert.doesNotMatch(html, /src="n\/a"|href="profile url"/);
   assert.equal(
     (html.match(/class="speaker-card speaker-card-/g) ?? []).length,
-    6,
+    7,
   );
   assert.doesNotMatch(html, /Wei Qingsong|Additional invited speaker/);
   assert.match(html, publicAssetPattern("/speakers/aidong-zhang.jpg"));
@@ -304,7 +306,10 @@ test("includes responsive phone and tablet layouts", async () => {
     stylesheet,
     /\.speaker-grid\s*\{[\s\S]*?grid-auto-rows:\s*auto;/,
   );
-  assert.doesNotMatch(stylesheet, /\.speaker-card-keynote\s*\{[\s\S]*?grid-column:/);
+  assert.match(
+    stylesheet,
+    /\.speaker-card-keynote\s*\{[\s\S]*?grid-column:\s*1 \/ -1;[\s\S]*?justify-self:\s*center;[\s\S]*?max-width:\s*var\(--speaker-card-width\);/,
+  );
   assert.match(
     stylesheet,
     /\.speaker-card-invited\s*\{[\s\S]*?box-shadow:\s*0 18px 48px rgba\(4, 12, 24, 0\.18\);/,

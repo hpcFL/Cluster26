@@ -107,16 +107,17 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 }
 
 const schedule = [
-  { time: "09:55 - 10:00", activity: "Opening remarks", type: "Welcome" },
-  { time: "10:00 - 10:45", activity: "Aidong Zhang", type: "Keynote" },
-  { time: "10:45 - 11:05", activity: "Jin-Hee Cho", type: "Talk" },
-  { time: "11:05 - 11:20", activity: "Coffee Break", type: "Break" },
-  { time: "11:20 - 11:40", activity: "Yijiang Li", type: "Talk" },
-  { time: "11:40 - 12:00", activity: "Ziyue Xu", type: "Talk" },
-  { time: "12:00 - 12:20", activity: "Ang Li", type: "Talk" },
-  { time: "12:20 - 12:40", activity: "Invited Speaker", type: "Talk" },
-  { time: "12:40 - 13:25", activity: "Panel discussion", type: "Panel" },
-  { time: "13:25 - 13:30", activity: "Concluding remarks", type: "Closing" },
+  { time: "09:45 - 09:50", activity: "Opening remarks", type: "Welcome" },
+  { time: "09:50 - 10:35", activity: "Aidong Zhang", type: "Keynote" },
+  { time: "10:35 - 10:55", activity: "Ang Li", type: "Talk" },
+  { time: "10:55 - 11:15", activity: "Yijiang Li", type: "Talk" },
+  { time: "11:15 - 11:30", activity: "Coffee Break", type: "Break" },
+  { time: "11:30 - 11:50", activity: "Ziyue Xu", type: "Talk" },
+  { time: "11:50 - 12:10", activity: "Jin-Hee Cho", type: "Talk" },
+  { time: "12:10 - 12:30", activity: "Invited Speaker1", type: "Talk" },
+  { time: "12:30 - 12:50", activity: "Invited Speaker2", type: "Talk" },
+  { time: "12:50 - 13:30", activity: "Panel discussion", type: "Panel" },
+  { time: "13:30 - 13:35", activity: "Concluding remarks", type: "Closing" },
 ];
 
 const keynoteSpeaker = {
@@ -164,16 +165,25 @@ const invitedSpeakers = [
     bio: "Jin-Hee Cho directs the Trustworthy Cyberspace Lab at Virginia Tech, working on trust management, uncertainty-aware decision-making, and AI for cybersecurity, with additional interests in moving target defense, deceptive defense, and network science.",
     profile: "https://people.cs.vt.edu/~jicho/",
     photo: publicAsset("/speakers/jin-hee-cho.jpg"),
-},
+  },
   {
-    name: "Invited speaker",
-    initials: "IS",
+    name: "Invited speaker1",
+    initials: "IS1",
     role: "Role",
     organization: "Organization",
     bio: "enter bio here",
-    profile: "profile url",
-    photo: "n/a",
+    profile: null,
+    photo: null,
   },
+  {
+    name: "Invited speaker2",
+    initials: "IS2",
+    role: "Role",
+    organization: "Organization",
+    bio: "enter bio here",
+    profile: null,
+    photo: null,
+  }
 ];
 
 const previousWorkshops = [
