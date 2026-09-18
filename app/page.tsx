@@ -433,7 +433,7 @@ export default function Home() {
                 <span className="location-pin" aria-hidden="true" />
                 <div>
                   <dt>Location</dt>
-                  <dd>Alexandria, Virginia, USA</dd>
+                  <dd>Alexandria, VA, USA</dd>
                 </div>
               </div>
               <div className="hero-detail-date">
@@ -455,7 +455,7 @@ export default function Home() {
               </a>
             </div>
             <p className="hero-venue">
-              Held in <strong>Room 5150, Academic Building One at the Virginia Tech Innovation Campus</strong>
+              Held in <strong>Room 5150, Academic Building One, Virginia Tech Innovation Campus.</strong>
             </p>
           </div>
           <aside className="hero-note" aria-label="Workshop focus">
@@ -521,7 +521,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
-            <h3>Located in <strong>Room 5150,  Academic Building One at the Virginia Tech Innovation Campus</strong>, Alexandria, Virginia. The schedule is listed in Eastern Daylight Time (EDT):</h3>
+            <h3>Located in <strong>Room 5150,  Academic Building One, Virginia Tech Innovation Campus</strong>, Alexandria, VA. The schedule is listed in Eastern Daylight Time (EDT):</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">
