@@ -455,7 +455,7 @@ export default function Home() {
               </a>
             </div>
             <p className="hero-venue">
-              <strong>Held in Room 5150, Academic Building One at the Virginia Tech Innovation Campus</strong>
+              Held in <strong>Room 5150, Academic Building One at the Virginia Tech Innovation Campus</strong>
             </p>
           </div>
           <aside className="hero-note" aria-label="Workshop focus">
