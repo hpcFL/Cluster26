@@ -521,7 +521,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
-            <h3>Located in <strong>Room 5150,  Academic Building One, Virginia Tech Innovation Campus</strong>, Alexandria, VA. The schedule is listed in Eastern Daylight Time (EDT):</h3>
+            <h3>Located in <strong>Room 5150,  Academic Building One, Virginia Tech Innovation Campus, Alexandria, VA</strong>. The schedule is listed in Eastern Daylight Time (EDT):</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">
