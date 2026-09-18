@@ -428,12 +428,15 @@ export default function Home() {
                 IEEE International Conference on Cluster Computing 2026
               </a>
             </p>
+            <p className="hero-venue">
+              Held in Room 5150, Academic Building One at the Virginia Tech Innovation Campus
+            </p>
             <dl className="hero-details" aria-label="Workshop details">
               <div className="hero-detail-location">
                 <span className="location-pin" aria-hidden="true" />
                 <div>
                   <dt>Location</dt>
-                  <dd>Room 5150, Academic Building One at the Virginia Tech Innovation Campus, Alexandria, Virginia, USA</dd>
+                  <dd>Alexandria, Virginia, USA</dd>
                 </div>
               </div>
               <div className="hero-detail-date">
@@ -518,7 +521,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
-            <h3>Located in Room 5150,  Academic Building One at the Virginia Tech Innovation Campus in Alexandria, Virginia. The schedule is as follows (times listed in Eastern Daylight Time or EDT):</h3>
+            <h3>Located in <strong>Room 5150,  Academic Building One at the Virginia Tech Innovation Campus</strong>, Alexandria, Virginia. The schedule is listed in Eastern Daylight Time (EDT):</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">

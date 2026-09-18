@@ -438,6 +438,16 @@ h1 {
   line-height: 1.65;
 }
 
+.hero-venue {
+  width: 100%;
+  max-width: none;
+  margin-top: -22px;
+  margin-bottom: 34px;
+  color: rgba(255, 253, 248, 0.68);
+  font-size: clamp(1.08rem, 1.6vw, 1.32rem);
+  line-height: 1.65;
+}
+
 .hero-location a {
   color: var(--teal);
   text-decoration: underline;
@@ -1801,14 +1811,17 @@ footer > a {
   }
 
   .hero-location,
-  .hero-location a {
+  .hero-location a,
+  .hero-venue {
     overflow-wrap: anywhere;
   }
 
   .hero-intro,
-  .hero-location {
+  .hero-location,
+  .hero-venue {
     font-size: 1rem;
     line-height: 1.58;
+    margin-top: 0;
   }
 
   .hero-details {
