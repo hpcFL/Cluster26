@@ -455,7 +455,7 @@ export default function Home() {
               </a>
             </div>
             <p className="hero-venue">
-              Held in <strong>Room 5150, Academic Building One, Virginia Tech Innovation Campus.</strong>
+              Held in <strong>Room 5150, Academic Building One, Virginia Tech Innovation Campus, 3625 Potomac Ave, Alexandria, VA 22305.</strong>
             </p>
           </div>
           <aside className="hero-note" aria-label="Workshop focus">
