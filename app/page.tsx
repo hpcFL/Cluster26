@@ -428,9 +428,6 @@ export default function Home() {
                 IEEE International Conference on Cluster Computing 2026
               </a>
             </p>
-            <p className="hero-venue">
-              Held in Room 5150, Academic Building One at the Virginia Tech Innovation Campus
-            </p>
             <dl className="hero-details" aria-label="Workshop details">
               <div className="hero-detail-location">
                 <span className="location-pin" aria-hidden="true" />
@@ -457,6 +454,9 @@ export default function Home() {
                 Explore the workshop <span aria-hidden="true">↓</span>
               </a>
             </div>
+            <p className="hero-venue">
+              <strong>Held in Room 5150, Academic Building One at the Virginia Tech Innovation Campus</strong>
+            </p>
           </div>
           <aside className="hero-note" aria-label="Workshop focus">
             <span>Focus / 2026</span>
