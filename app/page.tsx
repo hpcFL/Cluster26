@@ -109,12 +109,12 @@ function ScopeTopicIcon({ icon }: { icon: ScopeIconName }) {
 const schedule = [
   { time: "09:45am - 09:50am", activity: "Opening remarks", type: "Welcome" },
   { time: "09:50am - 10:35am", activity: "Aidong Zhang", type: "Keynote" },
-  { time: "10:35am - 10:55am", activity: "Ang Li", type: "Talk" },
+  { time: "10:35am - 10:55am", activity: "Ziyue Xu", type: "Talk" },
   { time: "10:55am - 11:15am", activity: "Yijiang Li", type: "Talk" },
   { time: "11:15am - 11:30am", activity: "Coffee Break", type: "Break" },
-  { time: "11:30am - 11:50am", activity: "Ziyue Xu", type: "Talk" },
-  { time: "11:50am - 12:10pm", activity: "Jin-Hee Cho", type: "Talk" },
-  { time: "12:10pm - 12:30pm", activity: "Jinyuan 'Stella' Sun", type: "Talk" },
+  { time: "11:30am - 11:50am", activity: "Jin-Hee Cho", type: "Talk" },
+  { time: "11:50am - 12:10pm", activity: "Jinyuan 'Stella' Sun", type: "Talk" },
+  { time: "12:10pm - 12:30pm", activity: "Ang Li", type: "Talk" },
   { time: "12:30pm - 12:50pm", activity: "Rui Hu", type: "Talk" },
   { time: "12:50pm - 01:30pm", activity: "Panel discussion", type: "Panel" },
   { time: "01:30pm - 01:35pm", activity: "Concluding remarks", type: "Closing" },
@@ -138,15 +138,6 @@ const invitedSpeakers = [
     bio: "Ziyue Xu develops machine learning and computer vision methods for biomedical and clinical imaging, with research spanning medical AI, shape modeling, and graph-based analysis.",
     profile: "https://research.nvidia.com/person/ziyue-xu",
     photo: publicAsset("/committee/ziyue-xu.jpg"),
-  },
-  {
-    name: "Ang Li",
-    initials: "AL",
-    role: "Assistant Professor",
-    organization: "University of Maryland, College Park",
-    bio: "Ang Li works at the intersection of machine learning and edge computing, building collaborative, scalable, secure, and trustworthy intelligent systems with a focus on federated learning.",
-    profile: "https://www.ang-li.com/",
-    photo: publicAsset("/speakers/ang-li.jpg"),
   },
   {
     name: "Yijiang Li",
@@ -174,6 +165,15 @@ const invitedSpeakers = [
     bio: "Prof. Sun received here PhD in electrical and computer engineering from the University of Florida in 2010. She has been serving as faculty in the Min H. Kao Department of Electrical Engineering and Computer Science at UTK, where she focuses on Security and privacy in wired/wireless networks and critical application systems.",
     profile: "https://eecs.utk.edu/people/jinyuan-stella-sun/",
     photo: publicAsset("/speakers/jinyuan-sun.jpg"),
+  },
+  {
+    name: "Ang Li",
+    initials: "AL",
+    role: "Assistant Professor",
+    organization: "University of Maryland, College Park",
+    bio: "Ang Li works at the intersection of machine learning and edge computing, building collaborative, scalable, secure, and trustworthy intelligent systems with a focus on federated learning.",
+    profile: "https://www.ang-li.com/",
+    photo: publicAsset("/speakers/ang-li.jpg"),
   },
   {
     name: "Rui (Zoey) Hu",
@@ -433,7 +433,7 @@ export default function Home() {
                 <span className="location-pin" aria-hidden="true" />
                 <div>
                   <dt>Location</dt>
-                  <dd>Alexandria, Virginia, USA</dd>
+                  <dd>Room 5150, Academic Building One at the Virginia Tech Innovation Campus, Alexandria, Virginia, USA</dd>
                 </div>
               </div>
               <div className="hero-detail-date">
@@ -518,7 +518,7 @@ export default function Home() {
           <div className="section-heading">
             <p className="section-kicker">03 / Program</p>
             <h2>Featuring current developments across industry, academia and national laboratories.</h2>
-            <h3>Workshop schedule. All times are listed in Eastern Daylight Time (EDT).</h3>
+            <h3>Located in Room 5150,  Academic Building One at the Virginia Tech Innovation Campus in Alexandria, Virginia. The schedule is as follows (times listed in Eastern Daylight Time or EDT):</h3>
           </div>
           <div className="program-layout">
             <div className="format-card">
